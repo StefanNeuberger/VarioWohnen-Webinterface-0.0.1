@@ -1,0 +1,177 @@
+nav {
+	margin-bottom: 20px;
+}
+
+.row {
+	margin-bottom: 0px;
+}
+
+.input-mieter2 {
+	padding-bottom: 2em;
+	display: none;
+}
+
+.input-mieter2.show {
+	display: block;
+}
+
+.input-titel {
+	font-size: 50px;
+	font-weight: 200;
+	padding: 0 0.75rem;
+	text-align: center;
+}
+
+.container-mieter-speichern {
+	padding: 0 0.75rem;
+	margin-top: 10px;
+}
+
+.modal-mieter-anlegen-titel,
+.modal-SBItem-loeschen-titel,
+.modal-Mieter-loeschen-titel
+ {
+	text-align: center;
+	padding-bottom: 50px;
+	text-transform: uppercase;
+	font-weight: 200;
+}
+
+.modal-content .row {
+	padding: 10px;
+	margin-bottom: 0;
+}
+
+.modal-content.mieter div:nth-child(odd) {
+	background-color: #d4d6d8;
+
+}
+
+#mieter-card-bestaetigung {
+	display: none;
+	padding: 0 0.75rem;	
+}
+
+#mieter-card-bestaetigung.show {
+	display: block;
+}
+
+#mieter-card-bestaetigung .card {
+	margin: 0;
+}
+
+#mieter-card-bestaetigung h3 {
+	font-size: 1.9em;
+	font-weight: 300;
+	padding-left: 0.75rem;
+}
+
+.mieter-card-bestaetigung-infos {
+	min-height: 200px;
+}
+
+.item-card-container .item-card {
+	min-height: 250px;
+}
+
+.item-card-content {
+	height: 200px;
+	padding: 10px;
+}
+
+#card-content-SB, #card-content-forum {
+	height: auto;
+}
+
+.mieter-card-name, .SB-card-title, .forum-card-title {
+	font-size: 1.3em;
+	text-transform: uppercase;
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+
+.SB-card-title {
+	width: 80%;
+}
+
+.SB-header, .forum-header {
+	margin-bottom: 20px;
+}
+
+.SB-card-verfasser, .forum-verfasser {
+	margin-bottom: 10px;
+	float: right;	
+}
+
+.SB-card-nachricht, .forum-card-nachricht {
+	background-color: #607d8b;
+	padding: 5px;
+}
+
+#card-title {
+	font-size: 1.3em;
+	text-transform: uppercase;
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+
+.materialize-textarea.schwarzesBrett-titel {
+	border: solid 1px black;
+	min-height: 5px;
+	padding-top: 5px;
+	margin: 0;
+	height: 10px;
+}
+
+.modal.modal-fixed-footer.schwarzesBrett-modal {
+	height: 60%;
+}
+
+.modal.modal-fixed-footer.forum-modal {
+	height: 50%;
+}
+
+
+@media screen and (max-width: 500px) {
+	#item-card {
+		padding: 0;
+		margin: 0;
+		padding: 0;
+	}
+
+	.modal .modal-content {
+		padding: 10px;
+	}
+	.modal-content h4 {
+		font-size: 1.7em;
+	}
+	.modal-mieter-anlegen-titel {
+		padding: 0;
+	}
+	#qr-code {
+		width: 100%;
+	}
+	.item-card-content {
+		padding: 10px;
+	}
+
+	.input-titel {
+		font-size: 2em;
+	}
+
+	.modal-content.schwarzes-brett {
+		padding: 0;
+	}
+
+	.modal-content .row {
+		padding: 0;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	head, body, nav, main {
+		width: 1200px;
+		margin-right: auto;
+		margin-left: auto;
+ 	}
+}

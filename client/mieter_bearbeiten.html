@@ -1,0 +1,170 @@
+ <!DOCTYPE html>
+  <html lang="de">
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta charset="utf-8">
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+      <link rel="stylesheet" type="text/css" href="css/style.css">      
+    </head>
+
+    <body>
+
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo">Logo</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-small-and-down nav-list">
+            <li class="list-item"><a href="index.html">Mieter hinzufügen</a></li>
+            <li class="list-item"><a href="#">Mieter bearbeiten</a></li>
+            <li class="list-item"><a href="Schwarzes_brett.html">Schwarzes Brett</a></li>
+            <li class="list-item"><a href="forum.html">Forum</a></li>
+          </ul>
+          <ul class="side-nav nav-list" id="mobile-demo">
+            <li class="list-item"><a href="index.html">Mieter hinzufügen</a></li>
+            <li class="list-item"><a href="#" >Mieter bearbeiten</a></li>
+            <li class="list-item"><a href="Schwarzes_brett.html">Schwarzes Brett</a></li>
+            <li class="list-item"><a href="#">Forum</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <main>
+
+
+        <!-- Input section für neue Mieter, default: display:none, aktiviert bei click button add -->
+        <section class="input-mieter2" id="input-container2">
+          <div class="row">
+            <h1 class="input-titel">Mieter hinzufügen</h1>
+          </div>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12 m6">
+                  <input  type="text" class="validate" id="first_name">
+                  <label for="first_name">Vorname</label>
+                </div>
+                <div class="input-field col s12 m6">
+                  <input id="last_name" type="text" class="validate">
+                  <label for="last_name">Nachname</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12 m8">
+                  <input id="mieter_adr" type="text" class="validate">
+                  <label for="mieter_adr">Adresse</label>
+                </div>
+                <div class="input-field col s6 m2">
+                  <input value="" size="5" name="form[plz]" id="plz" type="text">
+                  <label for="plz">PLZ</label>
+                </div>
+                <div class="input-field col s6 m2">
+                  <input value="" size="20" name="form[ort]" id="ort" type="text">
+                  <label for="ort"></label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12 m4">
+                  <input id="email" type="email" class="validate">
+                  <label for="email">Email</label>
+                </div>
+                <div class="input-field col s12 m4">
+                  <input id="telpriv" type="tel" class="validate">
+                  <label for="telpriv">Tel Privat</label>
+                </div>
+                 <div class="input-field col s12 m4">
+                  <input id="mobil" type="tel" class="validate">
+                  <label for="mobil">Tel Mobil</label>
+                </div>
+              </div>             
+            </form>
+          </div>
+          <div class="container-mieter-speichern">
+            <button class="btn waves-effect waves-light btn-large modal-trigger" data-target="modal1" type="submit" name="action" id="btn-mieter-speichern">Mieter anlegen
+                <i class="material-icons right">send</i>
+              </button>
+          </div>
+        </section>
+
+        <!-- Trigger Mieter Hinzufügen -->
+        <div class="fixed-action-btn">
+          <a class="btn-floating btn-large red button-addMieter">
+            <i class="large material-icons tooltipped" data-position="left" data-delay="50" data-tooltip="Mieter hinzufügen">add</i>
+          </a>           
+        </div>
+       
+        <!-- Hier Kommen dynamisch die Mieter Cards rein -->
+        <div class="mieter-list">
+          <div class="row mieter-list-cards">           
+          </div>         
+        </div>
+
+      </main>
+
+
+      <!-- Modal Structure Mieter anlegen Bestätigung Nachfrage -->
+       <div id="modal1" class="modal modal-container">
+         <div class="modal-content mieter">
+           <h4 class="modal-mieter-anlegen-titel">Neuen Mieter anlegen</h4>
+           <div class="row">
+             <span class="col s4">Vorname</span>
+             <span class="col s8" id="modal-mieter-fn"></span>
+           </div>
+           <div class="row">
+             <span class="col s4">Nachname</span>
+             <span class="col s8" id="modal-mieter-ln"></span>
+           </div>
+           <div class="row">
+             <span class="col s4">Adresse</span>
+             <span class="col s8" id="modal-mieter-adr"></span>
+           </div>
+           <div class="row">
+             <span class="col s4">PLZ</span>
+             <span class="col s8" id="modal-mieter-plz"></span>
+           </div>
+           <div class="row">
+             <span class="col s4">CITY</span>
+             <span class="col s8" id="modal-mieter-city"></span>
+           </div>
+           <div class="row">
+             <span class="col s4">EMail</span>
+             <span class="col s8" id="modal-mieter-mail"></span>
+           </div>
+           <div class="row">
+             <span class="col s4">Mobil:</span>
+             <span class="col s8" id="modal-mieter-mobil"></span>
+           </div>
+           <div class="row">
+             <span class="col s4">Tel Privat</span>
+             <span class="col s8" id="modal-mieter-telpriv"></span>
+           </div>
+         </div>
+         <div class="modal-footer">
+           <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Abbrechen</a>
+           <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" id="btn-modal-speichern">Speichern</a>
+         </div>
+       </div>
+
+      <!-- Modal Structure // Mieter löschen -->
+      <div id="modal-mieterLoeschen" class="modal modal-container">
+        <div class="modal-content Mieter-loeschen">
+          <h4 class="modal-Mieter-loeschen-titel">Mieter endgültig löschen?</h4>    
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Abbrechen</a>
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" id="btn-modal-Mieter-loeschen">Löschen</a>
+        </div>
+      </div>
+       
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+      <script src="client.js"></script>
+      <script type="text/javascript" src="js/my.js"></script>
+    </body>
+  </html>
